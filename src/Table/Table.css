@@ -1,0 +1,108 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #2DAA9E;
+    padding: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* General row styling */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+    flex-wrap: wrap;
+}
+
+/* Button styling */
+.cell-button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: 2px solid black;
+    background-color: white;
+    color: #5534db;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cell-button:hover {
+    background-color: #f1791e;
+    color: white;
+}
+
+/* Multiplier text */
+.multi {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 5px;
+    color: #2c3e50df;
+}
+
+/* ============= Responsive Design ============= */
+
+/* Tablets & Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .table {
+        width: 95%;
+    }
+
+    .cell-button {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .multi {
+        font-size: 18px;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .cell-button {
+        font-size: 14px;
+        padding: 8px 10px;
+        min-width: 80px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .multi {
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .table {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cell-button {
+        font-size: 12px;
+        padding: 6px 8px;
+        width: 100%;
+    }
+
+    .multi {
+        font-size: 14px;
+    }
+}

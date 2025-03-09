@@ -1,0 +1,57 @@
+/* Default (for large screens) */
+body {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+    width: 100vw;
+    margin: 0;
+    background-color: #1a1a1a; /* Dark background */
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive Design */
+
+/* Large Screens (Desktops & Larger Laptops) */
+@media (min-width: 1400px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+/* Medium Screens (Laptops & Tablets in Landscape) */
+@media (max-width: 1024px) {
+    body {
+        height: auto; /* Allow scrolling if needed */
+        flex-direction: column; /* Stack content vertically */
+        padding: 20px;
+    }
+}
+
+/* Tablets & Small Laptops */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        align-items: flex-start; /* Align content to the top */
+        padding: 15px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 576px) {
+    body {
+        height: auto;
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+}
+
+/* Extra Small Phones */
+@media (max-width: 400px) {
+    body {
+        padding: 5px;
+        justify-content: flex-start;
+    }
+}

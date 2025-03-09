@@ -1,0 +1,128 @@
+/* ====== Dashboard Container ====== */
+.dashboard {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #624E88;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ====== Counter Box ====== */
+.counter {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    width: 180px;
+    border: 2px solid #2c3e50;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); 
+    background: linear-gradient(135deg, #E6D9A2, #F4EBC1); /* Soft gradient */
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ====== Buttons Styling ====== */
+.counter-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.button {
+    padding: 12px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button.increment {
+    background-color: #2ecc71; /* Green */
+    color: white;
+}
+
+.button.increment:hover {
+    background-color: #27ae60;
+}
+
+.button.decrement {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
+
+.button.decrement:hover {
+    background-color: #c0392b;
+}
+
+.button.reset {
+    background-color: #f1c40f; /* Yellow */
+    color: black;
+}
+
+.button.reset:hover {
+    background-color: #d4ac0d;
+}
+
+/* ============= Responsive Design ============= */
+
+/* Tablets & Small Laptops */
+@media (max-width: 1024px) {
+    .counter {
+        height: 160px;
+        width: 160px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .counter {
+        height: 140px;
+        width: 140px;
+        font-size: 18px;
+    }
+
+    .counter-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 12px;
+        width: 100px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .counter {
+        height: 120px;
+        width: 120px;
+        font-size: 16px;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 6px 10px;
+        width: 90px;
+    }
+}
